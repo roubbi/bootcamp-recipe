@@ -12,7 +12,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use('/', api)
 
-const port = 1337 //because why not
+app.get('/sanity', function (request, response) {
+    response.send("Ok")
+})
+
+
+const port = 8080 
 app.listen(port, function () {
     console.log(`Server running on ${port}`)
 })
